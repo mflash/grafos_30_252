@@ -1,12 +1,11 @@
-public class AppDigraph
-{
+public class AppDigraph {
   public static void main(String[] args) {
-    /* 
-    Graph g = new Graph();
-    g.addEdge("0", "1");
-    g.addEdge("0", "2");
-    g.addEdge("2", "1");
-    */
+    /*
+     * Digraph g = new Digraph();
+     * g.addEdge("0", "1");
+     * g.addEdge("1", "2");
+     * g.addEdge("2", "0");
+     */
     Digraph g = new Digraph("exemplos/tinyG.txt");
 
     for (String v : g.getVerts()) {
