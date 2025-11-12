@@ -21,7 +21,7 @@ public class AppCaminhoCritico {
         }
 
         for (Edge e : dg.getEdges())
-             e.setWeight(-e.getWeight());
+            e.setWeight(-e.getWeight());
 
         DijkstraSP dij = new DijkstraSP(dg, "START");
 
@@ -33,13 +33,15 @@ public class AppCaminhoCritico {
         // (será o maior caminho de START a END)
         double tempoMinimo = 0;
         for (Edge e : dij.pathTo("END")) {
-            //System.out.print(e+" ");
+            // System.out.print(e + " ");
             e.setColor("color=\"red\" penwidth=3");
             tempoMinimo += e.getWeight();
         }
         System.out.println();
 
         System.out.println(dg.toDot());
-        //System.out.println("Tempo mínimo para conclusão do projeto: " + tempoMinimo);
+        // System.out.println("Tempo mínimo para conclusão do projeto: " + tempoMinimo);
+        // for (Edge e : dg.getEdges()) {
+        // e.setWeight(-e.getWeight());
     }
 }
